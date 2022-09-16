@@ -37,11 +37,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "test": "jest",
-    "test:cover": "rm -rf coverage && jest --coverage --no-cache",
-    "test:watch": "jest --watch"
+    "test:cover": "rm -rf coverage && react-scripts test --watchAll=false --coverage"
   },
   "eslintConfig": {
     "extends": [
@@ -60,6 +59,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "node": ">=14.19.0",
+    "npm": ">=8.6.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.36.2",
