@@ -40,7 +40,8 @@
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "test:cover": "rm -rf coverage && react-scripts test --watchAll=false --coverage"
+    "test:cover": "rm -rf coverage && react-scripts test --watchAll=false --coverage",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -72,6 +73,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.8",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.1"
   }
 }
