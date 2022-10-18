@@ -1,0 +1,50 @@
+.blocks-alert {
+  width: 100%;
+  padding: 8px 16px;
+  margin: 0;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  color: $white;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  &.hidden {
+    display: none;
+  }
+  &.info {
+    background-color: $info;
+  }
+  &.success {
+    background-color: $success;
+  }
+  &.warning {
+    background-color: $warning;
+  }
+  &.error {
+    background-color: $danger;
+  }
+  .larger {
+    width: 28px;
+  }
+  .content {
+    margin: 0 8px;
+    .title {
+      font-size: 16px;
+      line-height: 18px;
+    }
+    .description {
+      color: $white;
+      font-size: 12px;
+      margin: 5px 0 0;
+    }
+    .close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+}
+
