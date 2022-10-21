@@ -10,7 +10,7 @@ import '../../styles/index.scss';
 library.add(fas);
 
 export default {
-  title: 'Example/Icon',
+  title: '57blocks/Icon',
   component: Icon,
   argTypes: {
     backgroundColor: { control: 'color' },

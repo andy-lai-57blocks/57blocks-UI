@@ -2,6 +2,7 @@
 @import 'normalize';
 @import 'vars';
 @import 'mixins';
+@import 'animation';
 @import 'base';
 
 
@@ -9,3 +10,5 @@
 
 @import '../components/Icon/icon';
 @import '../components/Alert/alert';
+@import '../components/Button/button';
+@import '../components/Badge/badge';

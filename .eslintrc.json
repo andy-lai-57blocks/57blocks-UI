@@ -36,6 +36,7 @@
       "react/require-default-props": "off", // Since we do not use prop-types
       "react/function-component-definition": "off",
       "react/jsx-props-no-spreading": "off",
-      "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+      "react/button-has-type": "off"
     }
 }

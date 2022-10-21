@@ -32,8 +32,15 @@ const Alert: FC<AlertProps> = (props) => {
   const {
     title, description, type, closable, closeText, showIcon
   } = props;
+  const prefix = 'blocks-alert';
   const [visible, setVisible] = useState(true);
-  const classes = classNames('blocks-alert', type, { hidden: !visible });
+  const classes = classNames(
+    prefix,
+    {
+      [`${prefix}--${type}`]: type,
+      [`${prefix}--hidden`]: !visible
+    }
+  );
   const closeAlert = () => {
     setVisible(false);
   };
@@ -41,12 +48,12 @@ const Alert: FC<AlertProps> = (props) => {
   return (
     <div className={classes}>
       { showIcon && <Icon icon={iconMap[type!]} size={description ? '2xl' : 'sm'} theme="light" />}
-      <div className="content">
-        <span className="title">{title}</span>
-        { description && <p className="description">{description}</p> }
+      <div className={`${prefix}__content`}>
+        <span className={`${prefix}__title`}>{title}</span>
+        { description && <p className={`${prefix}__description`}>{description}</p> }
         { closable
           && (
-          <div className="close" onClick={closeAlert} aria-hidden="true">
+          <div className={`${prefix}__close-btn`} onClick={closeAlert} aria-hidden="true">
             { closeText ? <span>{closeText}</span> : <Icon icon="xmark" theme="light" />}
           </div>
           )}

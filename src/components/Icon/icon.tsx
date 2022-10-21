@@ -10,7 +10,7 @@ interface IconProps extends FontAwesomeIconProps {
 
 const Icon: React.FC<IconProps> = (props) => {
   const { className, theme, ...resetProps } = props;
-  const classes = classNames(className, { [`icon-${theme}`]: theme });
+  const classes = classNames(className, { [`blocks-icon--${theme}`]: theme });
   return (
     <FontAwesomeIcon className={classes} {...resetProps} />
   );

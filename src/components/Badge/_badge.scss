@@ -1,0 +1,39 @@
+.block-badge {
+  position: relative;
+  display: inline-block;
+  &__sup {
+    border-radius: 18px;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: $white;
+    padding: 0 4px;
+    &--fixed {
+      position: absolute;
+      top:0px;
+      right:0px;
+      transform: translate(50%, -50%);
+    }
+    &--dot {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+    }
+    &--primary {
+      background-color: $primary;
+    }
+    &--success {
+      background-color: $success;
+    }
+    &--warning {
+      background-color: $warning;
+    }
+    &--danger {
+      background-color: $danger;
+    }
+    &--info {
+      background-color: $info;
+    }
+  }
+}
