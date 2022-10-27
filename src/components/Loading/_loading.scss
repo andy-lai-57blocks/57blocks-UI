@@ -1,0 +1,40 @@
+.block-loading {
+  position: relative;
+  &__mask {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    display: block;
+    inset: 0;
+    margin: 0;
+  }
+  &__spinner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transform: translate(0, -50%);
+  }
+  &__circle {
+    width: 42px;
+    height: 42px;
+    animation: rotating 2s linear infinite;
+  }
+  &__path {
+    stroke-width: 2;
+    stroke: $primary;
+    stroke-dasharray:90 126;
+    stroke-dashoffset: 0;
+    animation: loading-dash 1.5s ease-in-out infinite;
+  }
+  &__text {
+    color: $primary;
+    margin: 3px 0;
+    font-size: 14px;
+  }
+  &--fullscreen {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+  }
+}

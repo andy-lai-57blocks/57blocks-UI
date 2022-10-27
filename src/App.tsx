@@ -6,6 +6,8 @@ import Icon from './components/Icon/icon';
 import Alert from './components/Alert/Alert';
 import Button from './components/Button/Button';
 import Badge from './components/Badge/Badge';
+import Progress from './components/Progress/Progress';
+import Loading from './components/Loading/Loading';
 
 import './styles/index.scss';
 
@@ -145,6 +147,45 @@ function App() {
         <Badge isDot value={10}>
           <Button>Primary Button</Button>
         </Badge>
+        <br />
+        <br />
+        <Progress percentage={-1} strokeHeight={30} />
+        <br />
+        <br />
+        <Progress percentage={67} strokeHeight={30} />
+        <br />
+        <br />
+        <Progress percentage={120} status="success" strokeHeight={30} />
+        <br />
+        <br />
+        <Progress percentage={97} status="exception" strokeHeight={30} />
+
+        <br />
+        <br />
+        <Progress percentage={-1} strokeHeight={20} textInside />
+        <br />
+        <br />
+        <Progress percentage={67} strokeHeight={20} textInside />
+        <br />
+        <br />
+        <Progress percentage={120} strokeHeight={20} status="success" textInside />
+        <br />
+        <br />
+        <Progress percentage={97} strokeHeight={20} status="exception" textInside />
+
+        <br />
+        <br />
+        <Progress percentage={-1} type="circle" strokeHeight={30} />
+        <Progress percentage={20} type="circle" strokeHeight={60} circleWidth={300} />
+        <Progress percentage={120} type="circle" status="success" />
+        <Progress percentage={97} type="circle" status="exception" />
+        <br />
+        <br />
+        <Loading text="Loading...">
+          <p style={{ height: '100px' }}>test</p>
+        </Loading>
+
+        <Loading fullscreen text="Loading..." />
       </header>
     </div>
   );

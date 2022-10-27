@@ -1,0 +1,54 @@
+.blocks-progress {
+  position: relative;
+  &--line {
+    display: flex;
+    align-items: center;
+  }
+  &--circle {
+    display: inline-block;
+  }
+  &-line {
+    width: 100%;
+    box-sizing: border-box;
+    &__outer {
+      background-color: $gray-200;
+      border-radius: 100px;
+      position: relative;
+    }
+    &__inner {
+      position: absolute;
+      text-align: right;
+      top: 0;
+      left: 0;
+      background-color: $primary;
+      height: 100%;
+      border-radius: 100px;
+      &--success {
+        background-color: $success;
+      }
+      &--exception {
+        background-color: $danger;
+      }
+    }
+    &__inner-text {
+      color: $white;
+      font-size: 12px;
+      margin: 0 5px;
+    }
+    &__text {
+      margin-left: 10px;
+    }
+  }
+  
+  &-circle {
+    display: inline-block;
+    &__text {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      transform: translate(0, -50%);
+    }
+  }
+}

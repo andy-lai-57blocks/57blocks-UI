@@ -8,3 +8,17 @@
   }
   
 }
+
+@keyframes loading-dash {
+  0% {
+    stroke-dasharray: 1 126;
+  }
+
+  50% {
+    stroke-dasharray: 55 126;
+  }
+
+  100% {
+    stroke-dasharray: 110 126;
+  }
+}
