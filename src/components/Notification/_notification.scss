@@ -1,0 +1,53 @@
+.blocks-notification{
+  z-index: 99999;
+  width: 330px;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  background-color: $white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  &--hidden {
+    display: none;
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+  &__content {
+    margin-left: 10px;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  &__message {
+    font-size: 14px;
+    line-height: 21px;
+    color: $secondary;
+  }
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+
+  &-appear {
+    right: -400px;
+  }
+  &-enter-done {
+    right: 16px;
+    transition: right 300ms;
+  }
+  &-exit {
+    opacity: 1;
+    right: 16px;
+  }
+  &-exit-done {
+    opacity: 1;
+    right: -400px;
+    transition: all 200ms;
+  }
+}

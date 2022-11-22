@@ -8,10 +8,43 @@ import Button from './components/Button/Button';
 import Badge from './components/Badge/Badge';
 import Progress from './components/Progress/Progress';
 import Loading from './components/Loading/Loading';
+import Notification from './components/Notification/Notification';
 
 import './styles/index.scss';
 
 library.add(fas);
+const openSuccess = () => {
+  Notification({
+    title: 'Success',
+    message: 'This is a success message',
+    type: 'success',
+    duration: 0,
+    top: 200,
+    onClose: () => { alert('111111'); },
+    onClick: () => { alert('2222222'); }
+  });
+};
+const openWarning = () => {
+  Notification({
+    title: 'Warning',
+    message: 'This is a warning message',
+    type: 'warning'
+  });
+};
+const openInfo = () => {
+  Notification({
+    title: 'Info',
+    message: 'This is a info message',
+    type: 'info'
+  });
+};
+const openError = () => {
+  Notification({
+    title: 'Error',
+    message: 'This is a error message',
+    type: 'error'
+  });
+};
 
 function App() {
   return (
@@ -185,7 +218,12 @@ function App() {
           <p style={{ height: '100px' }}>test</p>
         </Loading>
 
-        <Loading fullscreen text="Loading..." />
+        <div>
+          <Button type="success" onClick={openSuccess}>Success</Button>
+          <Button type="warning" onClick={openWarning}>Warning</Button>
+          <Button type="info" onClick={openInfo}>Info</Button>
+          <Button type="danger" onClick={openError}>Error</Button>
+        </div>
       </header>
     </div>
   );
