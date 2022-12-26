@@ -1,0 +1,43 @@
+.blocks-collapse {
+  border: 1px solid $gray-300;
+}
+
+.blocks-collapse-item {
+  &__header {
+    cursor: pointer;
+    height: 43px;
+    line-height: 43px;
+    font-size: 13px;
+    border-bottom: 1px solid $gray-300;
+    padding-left: 15px;
+  }
+
+  &__content {
+    font-size: 13px;
+    color: $dark;
+    background-color: $light ;
+    overflow: hidden;
+    height: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    will-change: height;
+    transition: .6s height ease-in-out,.6s padding-top ease-in-out,.6s padding-bottom ease-in-out;
+  }
+
+  &__content--active {
+    height: var(--height);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $gray-300;
+    transition: .3s height ease-in,.3s padding-top ease-in,.3s padding-bottom ease-in;
+  }
+
+  &__icon {
+    transition: all 200ms;
+    margin-right: 15px;
+  }
+  &__icon--active {
+    transform: rotate(90deg);
+  }
+}
+

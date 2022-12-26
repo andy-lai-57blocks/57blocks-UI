@@ -11,6 +11,8 @@ import Loading from './components/Loading/Loading';
 import Notification from './components/Notification/Notification';
 
 import './styles/index.scss';
+import Collapse from './components/Collapse/Collapse';
+import CollapseItem from './components/Collapse/CollapseItem';
 
 library.add(fas);
 const openSuccess = () => {
@@ -223,6 +225,47 @@ function App() {
           <Button type="warning" onClick={openWarning}>Warning</Button>
           <Button type="info" onClick={openInfo}>Info</Button>
           <Button type="danger" onClick={openError}>Error</Button>
+        </div>
+
+        <div style={{ width: '550px', marginLeft: '100px', marginBottom: '20px' }}>
+          <br />
+          <br />
+          <br />
+          <br />
+          <Collapse accordion>
+            <CollapseItem name="1" title="Consistency">
+              Consistent with real life: in line with the process and logic of real life,
+              and comply with languages and habits that the users are used to;
+              Consistent within interface: all elements should be consistent,
+              such as: design style, icons and texts, position of elements, etc.
+
+              Consistent within interface: all elements should be consistent,
+              such as: design style, icons and texts, position of elements, etc.
+
+              Consistent within interface: all elements should be consistent,
+              such as: design style, icons and texts, position of elements, etc.
+            </CollapseItem>
+            <CollapseItem name="2" title="Feedback">
+              Consistent with real life: in line with the process and logic of real life,
+              and comply with languages and habits that the users are used to;
+            </CollapseItem>
+            <CollapseItem name="3" title="Efficiency">
+              Consistent with real life: in line with the process and logic of real life,
+              and comply with languages and habits that the users are used to;
+              Consistent within interface: all elements should be consistent,
+              such as: design style, icons and texts, position of elements, etc.
+              Consistent with real life: in line with the process and logic of real life,
+              and comply with languages and habits that the users are used to;
+              Consistent within interface: all elements should be consistent,
+              such as: design style, icons and texts, position of elements, etc.
+            </CollapseItem>
+            <CollapseItem name="4" title="Controllability">
+              Consistent with real life: in line with the process and logic of real life,
+              and comply with languages and habits that the users are used to;
+              Consistent within interface: all elements should be consistent,
+              such as: design style, icons and texts, position of elements, etc.
+            </CollapseItem>
+          </Collapse>
         </div>
       </header>
     </div>
