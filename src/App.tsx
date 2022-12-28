@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,6 +13,9 @@ import Notification from './components/Notification/Notification';
 import './styles/index.scss';
 import Collapse from './components/Collapse/Collapse';
 import CollapseItem from './components/Collapse/CollapseItem';
+import Radio from './components/Radio/Radio';
+import RadioGroup from './components/Radio/RadioGroup';
+import RadioButton from './components/Radio/RadioButton';
 
 library.add(fas);
 const openSuccess = () => {
@@ -49,6 +52,11 @@ const openError = () => {
 };
 
 function App() {
+  const [radioValue, setRadioValue] = useState<string | number | boolean>('3');
+  const onChangeRadio = (value: string | number | boolean) => {
+    setRadioValue(value);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -266,6 +274,22 @@ function App() {
               such as: design style, icons and texts, position of elements, etc.
             </CollapseItem>
           </Collapse>
+        </div>
+
+        <div style={{ width: '550px', padding: '50px' }}>
+          <RadioGroup onChange={onChangeRadio} value={radioValue}>
+            <Radio value="1">Option A</Radio>
+            <Radio value="2">Option B</Radio>
+            <Radio value="3">Option C</Radio>
+          </RadioGroup>
+        </div>
+
+        <div style={{ width: '550px', padding: '50px' }}>
+          <RadioGroup size="small" onChange={onChangeRadio} value={radioValue}>
+            <RadioButton value="Beijing">Beijing</RadioButton>
+            <RadioButton value="Shanghai">Shanghai</RadioButton>
+            <RadioButton value="Guangzhou">Guangzhou</RadioButton>
+          </RadioGroup>
         </div>
       </header>
     </div>
