@@ -1,0 +1,40 @@
+.blocks-switch {
+  position: relative;
+  height: 22px;
+  line-height: 22px;
+  display: inline-block;
+  cursor: pointer;
+  &__checkbox {
+    display: none;
+  }
+  &__core {
+    display: inline-block;
+    position: relative;
+    background-color: $secondary;
+    border: 1px solid $secondary;
+    box-sizing: border-box;
+    height: 22px;
+    border-radius: 12px;
+    margin: 0;
+  }
+  &__button {
+    width: 16px;
+    height: 16px;
+    background-color: $white;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transition: transform 200ms;
+  }
+  &__text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    span {
+      position: absolute;
+      font-size: 14px;
+      color: $white;
+    }
+  }
+}

@@ -16,6 +16,7 @@ import CollapseItem from './components/Collapse/CollapseItem';
 import Radio from './components/Radio/Radio';
 import RadioGroup from './components/Radio/RadioGroup';
 import RadioButton from './components/Radio/RadioButton';
+import Switch from './components/Switch/Switch';
 
 library.add(fas);
 const openSuccess = () => {
@@ -25,8 +26,8 @@ const openSuccess = () => {
     type: 'success',
     duration: 0,
     top: 200,
-    onClose: () => { alert('111111'); },
-    onClick: () => { alert('2222222'); }
+    onClose: () => { },
+    onClick: () => { }
   });
 };
 const openWarning = () => {
@@ -58,8 +59,8 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="app">
+      <header className="app-header">
         <Alert title="success alert" type="error" description="more text description" showIcon />
         <Alert title="success alert" type="info" description="more text description" showIcon />
         <Alert title="success alert" type="success" description="more text description" showIcon />
@@ -290,6 +291,10 @@ function App() {
             <RadioButton value="Shanghai">Shanghai</RadioButton>
             <RadioButton value="Guangzhou">Guangzhou</RadioButton>
           </RadioGroup>
+        </div>
+
+        <div style={{ width: '550px', padding: '50px' }}>
+          <Switch />
         </div>
       </header>
     </div>
